@@ -59,7 +59,7 @@ def deduct_balance_from_wallet(wallet_address, amount_to_deduct):
         if amount_to_deduct < 0.1 or len(str(amount_to_deduct).split(".")[-1]) > 8:
             return (
                 None,
-                "Error: Invalid deduction amount. Must be at least 1 and have no more than 8 decimal places.",
+                "Error: Invalid deduction amount. Must be at least 0.1 and have no more than 8 decimal places.",
             )
         new_balance = balance - amount_to_deduct
         if new_balance < 0:
